@@ -24,9 +24,9 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #Cherry-picks
 
 #hardware_lineage_compat
-cd hardware/lineage/compat
-git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git && git cherry-pick  9144e5ff7fc4b634e10d4916a3ff6a3ba746af39
-croot
+#cd hardware/lineage/compat
+#git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git && git cherry-pick  9144e5ff7fc4b634e10d4916a3ff6a3ba746af39
+#croot
 
 #system_core
 cd system/core
