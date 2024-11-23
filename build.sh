@@ -60,5 +60,5 @@ rise b
 
 echo "--------------GAPPS BUILD STARTED--------------"
 
-mv out/target/product/ziti/*.zip
+mv out/target/product/ziti/*.zip .
 echo "--------------MOVED GAPPS ZIPS TO ROOT DIRECTORY----------------"
