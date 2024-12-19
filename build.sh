@@ -7,7 +7,7 @@ rm -rf out/target/product/ziti
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --git-lfs
+repo init -u https://github.com/PixelOS-Fifteen/manifest.git -b fifteen --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
