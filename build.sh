@@ -44,5 +44,4 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #croot
 
 #Lunch
-lunch aosp_ziti-ap2a-userdebug
-mka bacon
+breakfast ziti && make installclean && mka bacon -j$(nproc --all)
