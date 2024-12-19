@@ -7,11 +7,11 @@ rm -rf out/target/product/ziti
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b rising-15 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b aosp-15 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
