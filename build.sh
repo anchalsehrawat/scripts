@@ -7,7 +7,7 @@ rm -rf out/target/product/ziti
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/RisingTechOSS/android -b fifteen --git-lfs
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
@@ -44,19 +44,5 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #croot
 
 #Lunch
-riseup ziti userdebug
-echo "--------------VANILLA BUILD STARTED--------------"
-rise b
-
-mv out/target/product/ziti/*.zip .
-echo "--------------MOVED VANILLA ZIPS TO ROOT DIRECTORY--------------"
-
-#Exports for Gapps Build
-export WITH_GMS=true
-export TARGET_CORE_GMS=true
-export TARGET_DEFAULT_PIXEL_LAUNCHER=true
-echo "--------------GAPPS BUILD STARTED--------------"
-rise b
-
-mv out/target/product/ziti/*.zip .
-echo "--------------MOVED GAPPS ZIPS TO ROOT DIRECTORY----------------"
+lunch aosp_ziti-ap2a-userdebug
+mka bacon
