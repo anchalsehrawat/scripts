@@ -24,9 +24,9 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #Cherry-picks
 
 #hardware_lineage_compat
-#cd hardware/lineage/compat
-#git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git && git cherry-pick  9144e5ff7fc4b634e10d4916a3ff6a3ba746af39
-#croot
+cd hardware/lineage/compat
+git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git && git cherry-pick  9144e5ff7fc4b634e10d4916a3ff6a3ba746af39
+croot
 
 #system_core
 cd system/core
@@ -42,6 +42,7 @@ croot
 cd bootable/recovery
 git fetch https://github.com/anchalsehrawat/rising_android_bootable_recovery.git && git cherry-pick 106bbd05ac4640a1876cb7caca13172dcc82f250 && git cherry-pick 778a3bc4c6e56a939d05803ba5ed95280e9a505a
 croot
+echo "----------------Cherry-picks Done-----------------"
 
 #Lunch
 lunch lineage_ziti-ap3a-userdebug
