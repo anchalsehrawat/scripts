@@ -7,11 +7,11 @@ rm -rf out/target/product/ziti
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/RisingTechOSS/android -b fifteen --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b rising-15 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-15 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -44,19 +44,5 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #croot
 
 #Lunch
-riseup ziti userdebug
-echo "--------------VANILLA BUILD STARTED--------------"
-rise b
-
-mv out/target/product/ziti/*.zip .
-echo "--------------MOVED VANILLA ZIPS TO ROOT DIRECTORY--------------"
-
-#Exports for Gapps Build
-export WITH_GMS=true
-export TARGET_CORE_GMS=true
-export TARGET_DEFAULT_PIXEL_LAUNCHER=true
-echo "--------------GAPPS BUILD STARTED--------------"
-rise b
-
-mv out/target/product/ziti/*.zip .
-echo "--------------MOVED GAPPS ZIPS TO ROOT DIRECTORY----------------"
+lunch lineage_ziti-ap3a-userdebug
+m evolution
