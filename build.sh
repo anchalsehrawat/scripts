@@ -50,4 +50,12 @@ echo "----------------Cherry-picks Done-----------------"
 
 #Lunch
 lunch lineage_ziti-ap3a-userdebug
+export WITH_GMS=false
+m evolution
+
+mv out/target/product/ziti/*.zip .
+echo "--------------MOVED VANILLA ZIPS TO ROOT DIRECTORY--------------"
+
+#Build GMS
+export WITH_GMS=true
 m evolution
