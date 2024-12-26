@@ -4,6 +4,10 @@
 #Remove files
 rm -rf .repo/local_manifests
 rm -rf out/target/product/ziti
+rm -rf hardware/lineage/compat
+rm -rf system/core
+rm -rf system/update_engine
+rm -rf bootable/recovery
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
