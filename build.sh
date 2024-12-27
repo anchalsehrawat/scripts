@@ -46,7 +46,7 @@ croot
 cd bootable/recovery
 git fetch https://github.com/anchalsehrawat/rising_android_bootable_recovery.git && git cherry-pick 106bbd05ac4640a1876cb7caca13172dcc82f250 && git cherry-pick 778a3bc4c6e56a939d05803ba5ed95280e9a505a
 croot
-echo "----------------Cherry-picks Done-----------------"
+echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
 lunch lineage_ziti-ap3a-userdebug
@@ -54,8 +54,11 @@ export WITH_GMS=false
 m evolution
 
 mv out/target/product/ziti/*.zip .
-echo "--------------MOVED VANILLA ZIPS TO ROOT DIRECTORY--------------"
+echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
 
 #Build GMS
 export WITH_GMS=true
 m evolution
+
+mv out/target/product/ziti/*.zip .
+echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
