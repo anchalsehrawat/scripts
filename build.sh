@@ -49,7 +49,7 @@ croot
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
-lunch lineage_ziti-ap3a-userdebug
+lunch lineage_ziti-ap4a-userdebug
 export WITH_GMS=false
 m evolution
 
