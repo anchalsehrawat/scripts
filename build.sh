@@ -8,6 +8,7 @@ rm -rf hardware/lineage/compat
 rm -rf system/core
 rm -rf system/update_engine
 rm -rf bootable/recovery
+rm -rf hardware/qcom/audio
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
@@ -45,6 +46,11 @@ croot
 #bootable_recovery
 cd bootable/recovery
 git fetch https://github.com/anchalsehrawat/rising_android_bootable_recovery.git && git cherry-pick 106bbd05ac4640a1876cb7caca13172dcc82f250 && git cherry-pick 778a3bc4c6e56a939d05803ba5ed95280e9a505a
+croot
+
+#hardware_qcom_audio
+cd hardware/qcom/audio
+git fetch https://github.com/pjgowtham/android_hardware_qcom_audio.git && git cherry-pick 0580d08da7ab1f87ef64aea8210cebcc2b3bbade && git cherry-pick 7b35659dba676b9b703c0b3e25932985f2f34f2a
 croot
 echo "----------------CHERRY-PICKS DONE-----------------"
 
