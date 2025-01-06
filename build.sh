@@ -8,7 +8,7 @@ rm -rf hardware/lineage/compat
 rm -rf system/core
 rm -rf system/update_engine
 rm -rf bootable/recovery
-#rm -rf hardware/qcom/audio
+rm -rf hardware/qcom/audio
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
