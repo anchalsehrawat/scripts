@@ -12,7 +12,7 @@ rm -rf bootable/recovery
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
+repo init -u https://github.com/anchalsehrawat/evox_manifest -b vic --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
