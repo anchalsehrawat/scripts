@@ -8,11 +8,11 @@ rm -rf hardware/lineage/compat
 rm -rf system/core
 rm -rf system/update_engine
 rm -rf bootable/recovery
-rm -rf hardware/qcom/audio
+rm -rf hardware/qcom-caf/sm8350/audio
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/anchalsehrawat/evox_manifest -b vic --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
@@ -49,9 +49,9 @@ git fetch https://github.com/anchalsehrawat/rising_android_bootable_recovery.git
 croot
 
 #hardware_qcom_audio
-#cd hardware/qcom/audio
-#git fetch https://github.com/pjgowtham/android_hardware_qcom_audio.git && git cherry-pick 0580d08da7ab1f87ef64aea8210cebcc2b3bbade && git cherry-pick 7b35659dba676b9b703c0b3e25932985f2f34f2a
-#croot
+cd hardware/qcom-caf/sm8350/audio
+git fetch https://github.com/anchalsehrawat/android_hardware_qcom_audio.git && git cherry-pick a99b3b29e532e94fbf36bcfb4a3ed518e311056c && git cherry-pick 096bf59e6d6ae1e1754bbaabe79e3d3901a149d6
+croot
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
