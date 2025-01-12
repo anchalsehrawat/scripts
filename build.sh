@@ -9,6 +9,7 @@ rm -rf system/core
 rm -rf system/update_engine
 rm -rf bootable/recovery
 rm -rf hardware/qcom-caf/sm8350/audio
+rm -rf vendor/extras
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
@@ -55,9 +56,8 @@ croot
 
 #vendor_extras
 cd vendor/extras
-git fetch https://github.com/anchalsehrawat/vendor_extras.git && git cherry-pick a3ba1b0f60b36f1e68903f8c7167749bfb012ae1
+git fetch https://github.com/anchalsehrawat/vendor_extras.git && git cherry-pick 3eec56c7a44d43a3f8163b9343a4a9751a4ec7be
 croot
-
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
