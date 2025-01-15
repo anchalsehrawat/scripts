@@ -50,7 +50,7 @@ croot
 
 #hardware_qcom_audio
 cd hardware/qcom-caf/sm8350/audio
-git fetch https://github.com/anchalsehrawat/android_hardware_qcom_audio.git && git cherry-pick 701891da604bd9293de528eda30ae474dbd081b7 && git cherry-pick 59e6db40bb02b439ddb8cfea6727f904bcd0197c && git cherry-pick d54aa47c3266a55a3f24d7d3cc4ad06a4b791248
+git fetch https://github.com/anchalsehrawat/android_hardware_qcom_audio.git && git cherry-pick 701891da604bd9293de528eda30ae474dbd081b7 && git cherry-pick 59e6db40bb02b439ddb8cfea6727f904bcd0197c
 croot
 
 #Lunch
