@@ -8,7 +8,6 @@ rm -rf hardware/lineage/compat
 rm -rf system/core
 rm -rf system/update_engine
 rm -rf bootable/recovery
-rm -rf hardware/qcom-caf/sm8350/audio
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
@@ -46,11 +45,6 @@ croot
 #bootable_recovery
 cd bootable/recovery
 git fetch https://github.com/anchalsehrawat/rising_android_bootable_recovery.git && git cherry-pick 106bbd05ac4640a1876cb7caca13172dcc82f250 && git cherry-pick 778a3bc4c6e56a939d05803ba5ed95280e9a505a
-croot
-
-#hardware_qcom_audio
-cd hardware/qcom-caf/sm8350/audio
-git fetch https://github.com/anchalsehrawat/android_hardware_qcom_audio.git && git cherry-pick 4dfe697972bc6ce741ec52ca7e0b4efcdbbaebff && git cherry-pick 7a0cc78c6405f3d5235a22f560ac7018d88c9ac4
 croot
 
 #Lunch
