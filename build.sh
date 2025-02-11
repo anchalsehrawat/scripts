@@ -39,7 +39,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 
 #hardware_lineage_compat
 #cd hardware/lineage/compat
-#git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git && git cherry-pick  4a3e05b445745110ec17b89e3976645744bcacf0
+#git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git && git cherry-pick 4a3e05b445745110ec17b89e3976645744bcacf0
 #croot
 
 #system_update_engine
