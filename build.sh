@@ -10,7 +10,7 @@ rm -rf hardware/lineage/compat
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --git-lfs
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fifteen --depth 1 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
@@ -50,3 +50,7 @@ echo "---------------CHERRY-PICKS DONE------------------"
 
 #Lunch
 breakfast ziti && make installclean && mka bacon -j$(nproc --all)
+
+#Move zips
+mv out/target/product/ziti/*.zip .
+echo "--------------MOVED ZIPS TO ROOT DIRECTORY--------------"
