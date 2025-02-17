@@ -11,7 +11,7 @@ rm -rf .repo/local_manifests
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/Evolution-X/manifest -b vic --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b vic --depth 1 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
