@@ -59,6 +59,8 @@ export WITH_GMS=false
 m evolution
 
 mv out/target/product/ziti/*.zip .
+mv out/target/product/ziti/ziti.json .
+mv ziti.json ziti_Vanilla.json
 echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
 
 #Build GMS
@@ -66,4 +68,5 @@ export WITH_GMS=true
 m evolution
 
 mv out/target/product/ziti/*.zip .
+mv out/target/product/ziti/ziti.json .
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
