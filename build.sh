@@ -36,14 +36,14 @@ git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && gi
 croot
 
 #EvoX OTA
-cd evolution/OTA
-git fetch https://github.com/anchalsehrawat/Evox_OTA.git && git cherry-pick e976e7590932a077c8e3816591616ab6360d27c1
-croot
+#cd evolution/OTA
+#git fetch https://github.com/anchalsehrawat/Evox_OTA.git && git cherry-pick e976e7590932a077c8e3816591616ab6360d27c1
+#croot
 
 #EvoX OTA-Vanilla
-cd evolution/OTA-VANILLA
-git fetch https://github.com/anchalsehrawat/Evox_OTA.git && git cherry-pick e976e7590932a077c8e3816591616ab6360d27c1
-croot
+#cd evolution/OTA-VANILLA
+#git fetch https://github.com/anchalsehrawat/Evox_OTA.git && git cherry-pick e976e7590932a077c8e3816591616ab6360d27c1
+#croot
 
 #system_core
 #cd system/core
