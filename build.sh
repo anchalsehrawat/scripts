@@ -7,9 +7,9 @@
 #rm -rf system/update_engine
 #rm -rf bootable/recovery
 #rm -rf hardware/qcom-caf/sm8350/audio
-#rm -rf evolution/OTA-VANILLA
-#rm -rf evolution/OTA
-#rm -rf packages/apps/Updater
+rm -rf evolution/OTA-VANILLA
+rm -rf evolution/OTA
+rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 echo "----------------DELETED DIRECTORIES----------------"
 
