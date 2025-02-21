@@ -70,16 +70,12 @@ croot
 #git fetch https://github.com/anchalsehrawat/android_hardware_qcom_audio.git && git cherry-pick 55c1bb4d439b725ba1eb92646bac440ccf52925b
 #croot
 echo "----------------CHERRY-PICKS DONE-----------------"
-
+#Apps Updater
+cd packages/apps/Updater
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 035d867e3a250803e777c98f3f94d42a0eb3eefa
+croot
 #Lunch
 lunch lineage_ziti-ap4a-userdebug
-export WITH_GMS=false
-m evolution
-
-mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_Vanilla.json
-echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
 
 #Build GMS
 export WITH_GMS=true
@@ -88,3 +84,17 @@ m evolution
 mv out/target/product/ziti/*.zip .
 mv out/target/product/ziti/ziti.json .
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
+
+#Build Vanilla
+#Apps Updater
+cd packages/apps/Updater
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick e2f5947a6f60075d1983e9be915c54743c5d22e3
+croot
+
+export WITH_GMS=false
+m evolution
+
+mv out/target/product/ziti/*.zip .
+mv out/target/product/ziti/ziti.json .
+mv ziti.json ziti_Vanilla.json
+echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
