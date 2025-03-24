@@ -55,16 +55,17 @@ croot
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Build GMS
-axion ziti gms core
-ax br -j$(nproc --all)
+export WITH_GMS=true
+export WITH_GMS_VARIANT=core
+breakfast ziti userdebug && make installclean && mka bacon -j$(nproc --all)
 
 mv out/target/product/ziti/*.zip .
 mv out/target/product/ziti/ziti.json .
 mv ziti.json ziti_gapps.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-axion ziti va
-ax br -j$(nproc --all)
+export WITH_GMS=false
+breakfast ziti userdebug && make installclean && mka bacon -j$(nproc --all)
 
 mv out/target/product/ziti/*.zip .
 mv out/target/product/ziti/ziti.json .
