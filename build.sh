@@ -56,7 +56,7 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Build GMS
 axion ziti gms core
-ax -br
+ax br -j$(nproc --all)
 
 mv out/target/product/ziti/*.zip .
 mv out/target/product/ziti/ziti.json .
@@ -64,7 +64,7 @@ mv ziti.json ziti_gapps.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
 axion ziti va
-ax -br
+ax br -j$(nproc --all)
 
 mv out/target/product/ziti/*.zip .
 mv out/target/product/ziti/ziti.json .
