@@ -56,7 +56,7 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Build GMS
 export WITH_GMS=true
-export WITH_GMS_VARIANT=core
+export WITH_GMS_VARIANT=pico
 breakfast ziti userdebug && make installclean && mka bacon -j$(nproc --all)
 
 mv out/target/product/ziti/*.zip .
