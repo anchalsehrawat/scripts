@@ -29,7 +29,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 
 #Apps Updater
 cd packages/apps/Updater
-git remote add anc -t lineage-22.2 https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git fetch anc && git cherry-pick d9cbb3ffd6c749dcb4a926cb44cc187ca84ce2ab
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-22.2 && git cherry-pick d9cbb3ffd6c749dcb4a926cb44cc187ca84ce2ab
 croot
 
 system_core
