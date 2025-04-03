@@ -14,7 +14,7 @@ rm -rf .repo/local_manifests
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/Evolution-X/manifest -b vic-qpr1 --depth 1 --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b vic --depth 1 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
@@ -72,7 +72,7 @@ croot
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
-lunch lineage_ziti-ap4a-userdebug
+lunch lineage_ziti-bp1a-userdebug
 
 #Build GMS
 export WITH_GMS=true
