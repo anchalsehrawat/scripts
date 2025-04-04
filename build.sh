@@ -59,7 +59,7 @@ axion ziti userdebug gms pico
 ax -b -j$(nproc --all) userdebug
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
+mv out/target/product/ziti/GMS/ziti.json .
 mv ziti.json ziti_gapps.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 #Vanilla
@@ -67,6 +67,6 @@ axion ziti userdebug va
 ax -b -j$(nproc --all) userdebug
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
+mv out/target/product/ziti/VANILLA/ziti.json .
 mv ziti.json ziti_vanilla.json
 echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
