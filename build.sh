@@ -90,7 +90,6 @@ m evolution
 mv out/target/product/ziti/*.zip .
 mv out/target/product/ziti/ziti.json .
 mv ziti.json ziti_gapps.json
-mv out/target/product/ziti/vendor_boot.img .
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
 #Build Vanilla
