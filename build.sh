@@ -73,10 +73,10 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #croot
 
 #Apps Updater
-#cd packages/apps/Updater
+cd packages/apps/Updater
 #git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick e2f5947a6f60075d1983e9be915c54743c5d22e3
-#git revert e2f5947a6f60075d1983e9be915c54743c5d22e3
-#croot
+git revert e2f5947a6f60075d1983e9be915c54743c5d22e3
+croot
 
 #echo "----------------CHERRY-PICKS DONE-----------------"
 
