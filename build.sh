@@ -11,11 +11,11 @@ rm -rf .repo/local_manifests
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-22.2 --git-lfs --depth 1
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs --depth 1
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b axion-15 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b cr-15 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -29,7 +29,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 
 #Apps Updater
 cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-22.2 && git cherry-pick d9cbb3ffd6c749dcb4a926cb44cc187ca84ce2ab
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git 15.0 && git cherry-pick f55016bd222aa5c32b4b12ac294911103d5e4a88
 croot
 
 system_core
@@ -54,19 +54,16 @@ croot
 
 echo "----------------CHERRY-PICKS DONE-----------------"
 
-#Build GMS
-axion ziti userdebug gms pico
-ax -b -j$(nproc --all) userdebug
+#Build
+export TARGET_HAS_UDFPS=true 
+export TARGET_ENABLE_BLUR=true 
+brunch ziti
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/GMS/ziti.json .
-mv ziti.json ziti_gapps.json
-echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
-#Vanilla
-axion ziti userdebug va
-ax -b -j$(nproc --all) userdebug
-
-mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/VANILLA/ziti.json .
-mv ziti.json ziti_vanilla.json
-echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
+mv out/target/product/ziti/ziti.json .
+mv out/target/product/ziti/boot.img .
+mv out/target/product/ziti/vendor_boot.img .
+mv out/target/product/ziti/dtbo.img .
+mv out/target/product/ziti/vbmeta.img .
+mv out/target/product/ziti/super_empty.img .
+echo "--------------MOVED BUILD TO ROOT DIRECTORY--------------"
