@@ -87,7 +87,7 @@ echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 #Build Vanilla
 #Apps Updater
 cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick e2f5947a6f60075d1983e9be915c54743c5d22e3
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 747f361e516fe6267293a59e79c8ff7a0dd7b6f5
 croot
 
 export WITH_GMS=false
