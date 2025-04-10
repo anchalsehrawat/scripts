@@ -58,12 +58,3 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 export TARGET_HAS_UDFPS=true 
 export TARGET_ENABLE_BLUR=true 
 brunch ziti
-
-mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv out/target/product/ziti/boot.img .
-mv out/target/product/ziti/vendor_boot.img .
-mv out/target/product/ziti/dtbo.img .
-mv out/target/product/ziti/vbmeta.img .
-mv out/target/product/ziti/super_empty.img .
-echo "--------------MOVED BUILD TO ROOT DIRECTORY--------------"
