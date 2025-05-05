@@ -29,7 +29,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 
 #Apps Updater
 cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-22.2 && git cherry-pick d9cbb3ffd6c749dcb4a926cb44cc187ca84ce2ab
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-22.2 && git cherry-pick aaef0a02c59c4ef9cba98d629fe264792397d49f
 croot
 
 system_core
