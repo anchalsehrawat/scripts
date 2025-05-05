@@ -39,7 +39,7 @@ croot
 
 #bootable_recovery
 cd bootable/recovery
-git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git && git cherry-pick 7f64946ca76279ef31e455c9d742b8fa12567377
+git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git lineage-22.2 && git cherry-pick be4da6468f26e20f6bf30098033a1235cde0b145 && git cherry-pick 2705acd24bd6dd0898e3f4c04f4dd4f26c3bb006 && git cherry-pick 0d092dc403fae09ce8133a9c89c91d934c7f2f4b
 croot
 
 #hardware_lineage_compat
