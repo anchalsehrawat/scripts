@@ -8,9 +8,7 @@ rm -rf system/update_engine
 rm -rf bootable/recovery
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
-#rm -rf hardware/qcom-caf/sm8350/audio
-#rm -rf evolution/OTA-VANILLA
-#rm -rf evolution/OTA
+
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
@@ -55,25 +53,13 @@ cd system/update_engine
 git fetch https://github.com/anchalsehrawat/android_system_update_engine.git && git cherry-pick 0edfe05fdc2a3ebb387b827d6728496e2fa7e943 && git cherry-pick 7c48159420c99f1cfb846eebc7d7ee7b1eb167d3
 croot
 
-#hardware_qcom_audio
-#cd hardware/qcom-caf/sm8350/audio
-#git fetch https://github.com/anchalsehrawat/android_hardware_qcom_audio.git && git cherry-pick 55c1bb4d439b725ba1eb92646bac440ccf52925b
-#croot
-
-#EvoX OTA
-#cd evolution/OTA
-#git fetch https://github.com/anchalsehrawat/Evox_OTA.git && git cherry-pick e976e7590932a077c8e3816591616ab6360d27c1
-#croot
-
-#EvoX OTA-Vanilla
-#cd evolution/OTA-VANILLA
-#git fetch https://github.com/anchalsehrawat/Evox_OTA.git && git cherry-pick e976e7590932a077c8e3816591616ab6360d27c1
-#croot
-
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
 lunch lineage_ziti-bp1a-userdebug
+
+#ADB 
+export WITH_ADB_INSECURE=true
 
 #Build GMS
 export WITH_GMS=true
