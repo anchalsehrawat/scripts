@@ -13,11 +13,11 @@ rm -rf prebuilts/clang/host/linux-x86
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/Evolution-X/manifest -b vic --depth 1 --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b bka --depth 1 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-15 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -31,7 +31,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 
 #Apps Updater
 cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 035d867e3a250803e777c98f3f94d42a0eb3eefa
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick a33d53ac66d1ec7124fb77bb22fa52fbbb194452
 croot
 
 #system_core
@@ -41,7 +41,7 @@ croot
 
 #bootable_recovery
 cd bootable/recovery
-git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git && git cherry-pick a3ce1a7dd6af031285c1551eda7dde5fb0b1e43f && git cherry-pick 7f64946ca76279ef31e455c9d742b8fa12567377
+git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git && git cherry-pick 611906a69e81ed03f6a2b3137257d952f7869b20 && git cherry-pick be79661dfd509f0ff47b0663d097c3ae79e6f666 && git cherry-pick 92eb57ab11fad248257c1cf01d642ed38ae2c888
 croot
 
 #hardware_lineage_compat
@@ -57,10 +57,10 @@ croot
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
-lunch lineage_ziti-bp1a-userdebug
+lunch lineage_ziti-bp2a-userdebug
 
 #ADB 
-#export WITH_ADB_INSECURE=true
+export WITH_ADB_INSECURE=true
 
 #Build GMS
 export WITH_GMS=true
@@ -73,9 +73,9 @@ echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
 #Build Vanilla
 #Apps Updater
-cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 747f361e516fe6267293a59e79c8ff7a0dd7b6f5
-croot
+#cd packages/apps/Updater
+#git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 747f361e516fe6267293a59e79c8ff7a0dd7b6f5
+#croot
 
 export WITH_GMS=false
 m evolution
