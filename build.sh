@@ -60,7 +60,7 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 lunch lineage_ziti-bp2a-userdebug
 
 #ADB 
-export WITH_ADB_INSECURE=true
+#export WITH_ADB_INSECURE=true
 
 #Build GMS
 export WITH_GMS=true
