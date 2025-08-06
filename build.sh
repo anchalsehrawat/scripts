@@ -13,11 +13,11 @@ rm -rf prebuilts/clang/host/linux-x86
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/Evolution-X/manifest -b bka --depth 1 --git-lfs
+repo init -u https://github.com/RisingOS-Revived/android -b sixteen --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b rising-16 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -31,7 +31,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 
 #Apps Updater
 cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 13f622049a1818e0f5449180e4de51c47afcb2df
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git sixteen && git cherry-pick 289501d946c0f875ba6992a9aefc0b6d16ac5200
 croot
 
 #system_core
@@ -41,7 +41,7 @@ croot
 
 #bootable_recovery
 cd bootable/recovery
-git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git && git cherry-pick 611906a69e81ed03f6a2b3137257d952f7869b20 && git cherry-pick be79661dfd509f0ff47b0663d097c3ae79e6f666 && git cherry-pick 92eb57ab11fad248257c1cf01d642ed38ae2c888
+git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git sixteen && git cherry-pick d15a2ce09a66de3c82e747b6ba2bd96e4ef893d2 && git cherry-pick 052cbbd7443b5a05d5c1cd4378eb44dff61477c1 && git cherry-pick 6fea4178fbde7dbcb139a0561b0b489514cb0601 && git cherry-pick ed03717d700974e9bbf974989ab2f7f671bd8e52
 croot
 
 #hardware_lineage_compat
@@ -57,30 +57,21 @@ croot
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
-lunch lineage_ziti-bp2a-userdebug
-
-#ADB 
-#export WITH_ADB_INSECURE=true
+riseup ziti userdebug
 
 #Build GMS
+export TARGET_ENABLE_BLUR=true
 export WITH_GMS=true
-m evolution
+rise b
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_gapps.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
 #Build Vanilla
-#Apps Updater
-#cd packages/apps/Updater
-#git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 747f361e516fe6267293a59e79c8ff7a0dd7b6f5
-#croot
 
 export WITH_GMS=false
-m evolution
+#export WITH_MICROG=true 
+rise b
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_vanilla.json
 echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
