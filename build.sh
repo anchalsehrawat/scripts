@@ -67,6 +67,7 @@ lunch lineage_ziti-bp2a-userdebug
 
 #ADB 
 #export WITH_ADB_INSECURE=true
+export TARGET_INCLUDE_ACCORD=false
 
 #Build GMS
 export WITH_GMS=true
