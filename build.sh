@@ -9,6 +9,7 @@ rm -rf bootable/recovery
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf vendor/lineage
 
 echo "----------------DELETED DIRECTORIES----------------"
 
@@ -32,6 +33,11 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #Apps Updater
 cd packages/apps/Updater
 git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 13f622049a1818e0f5449180e4de51c47afcb2df
+croot
+
+#Vanilla Updater urls
+cd vendor/lineage
+git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
 croot
 
 #system_core
@@ -68,14 +74,8 @@ m evolution
 
 mv out/target/product/ziti/*.zip .
 mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_gapps.json
+mv ziti.json ziti_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
-
-#Build Vanilla
-#Apps Updater
-#cd packages/apps/Updater
-#git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 747f361e516fe6267293a59e79c8ff7a0dd7b6f5
-#croot
 
 export WITH_GMS=false
 m evolution
