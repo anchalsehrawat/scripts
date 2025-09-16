@@ -5,6 +5,7 @@
 rm -rf hardware/lineage/compat
 rm -rf .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
+rm -rf hardware/qcom-caf/sm8350/audio
 
 echo "----------------DELETED DIRECTORIES----------------"
 
