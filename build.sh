@@ -15,18 +15,18 @@ echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
 repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
-echo "--------------REPO INITIALISED---------------"
+echo "-----------------REPO INITIALISED------------------"
 
 #Local Manifest
 git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b yaap-16 .repo/local_manifests
-echo "-----------------CLONED local manifest-------------------"
+echo "--------------CLONED local manifest----------------"
 
 #Resync
 /opt/crave/resync.sh
-echo "---------------RESYNCED-----------------"
+echo "---------------------RESYNCED----------------------"
 #Build Environment
 . build/envsetup.sh
-echo "---------------BUILD ENVIRONMENT------------------"
+echo "---------------BUILD ENVIRONMENT-------------------"
 
 #Cherry-picks
 
@@ -62,24 +62,28 @@ cd bootable/recovery
 git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git -t yaap-16 && git cherry-pick 12c3ea5723b3b7a831cf339c62cf1b067cbd40d7 && git cherry-pick a3444df8157552bc797d64cfcdfbca3e3abb1c79 && git cherry-pick 3ce47e031b0476c9d7a0e83346c984423351a71d
 croot
 
-echo "----------------CHERRY-PICKS DONE-----------------"
+echo "----------------CHERRY-PICKS DONE------------------"
 
 #Lunch
 lunch yaap_ziti-userdebug
 
 #Build GMS
-export WITH_GMS=true
+export TARGET_BUILD_GAPPS=false
 m yaap
 
-mv out/target/product/ziti/*.zip .
+cp -r out/target/product/ziti/YAAP-16* .
+cp -r out/target/product/ziti/boot.img .
+cp -r out/target/product/ziti/dtbo.img .
+cp -r out/target/product/ziti/vbmeta.img .
+cp -r out/target/product/ziti/vendor_boot.img .
+cp -r out/target/product/ziti/super_empty.img .
+mv ziti.json ziti_vanilla.json
+echo "---------------VANILLA BUILD COMPLETE--------------"
+
+lunch yaap_ziti-userdebug
+export TARGET_BUILD_GAPPS=true
+m yaap
+
 mv out/target/product/ziti/ziti.json .
 mv ziti.json ziti_gms.json
-echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
-
-export WITH_GMS=false
-m yaap
-
-mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_vanilla.json
-echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
+echo "---------------GMS BUILD COMPLETE------------------"
