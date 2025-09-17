@@ -38,7 +38,7 @@ croot
 #OTA Support
 #For GMS 
 cd packages/apps/OpenDelta
-git fetch https://github.com/anchalsehrawat/packages_apps_OpenDelta.git && git cherry-pick 9446690c27b0975d28e590ce068cfacddf880e3e
+git fetch https://github.com/anchalsehrawat/packages_apps_OpenDelta.git && git cherry-pick d6347c0d71f7997d7b8a7de45db9fc7168a75674
 croot
 
 #For Vanilla
@@ -72,11 +72,7 @@ export TARGET_BUILD_GAPPS=false
 m yaap
 
 cp -r out/target/product/ziti/YAAP-16* .
-cp -r out/target/product/ziti/boot.img .
-cp -r out/target/product/ziti/dtbo.img .
-cp -r out/target/product/ziti/vbmeta.img .
-cp -r out/target/product/ziti/vendor_boot.img .
-cp -r out/target/product/ziti/super_empty.img .
+mv out/target/product/ziti/ziti.json .
 mv ziti.json ziti_vanilla.json
 echo "---------------VANILLA BUILD COMPLETE--------------"
 
