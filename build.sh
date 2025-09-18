@@ -4,12 +4,12 @@
 #Remove files
 rm -rf hardware/lineage/compat
 rm -rf .repo/local_manifests
-rm -rf prebuilts/clang/host/linux-x86
 rm -rf system/core
 rm -rf system/update_engine
 rm -rf bootable/recovery
 #rm -rf vendor/yaap
 #rm -rf packages/apps/OpenDelta
+#rm -rf prebuilts/clang/host/linux-x86
 
 echo "----------------DELETED DIRECTORIES----------------"
 
