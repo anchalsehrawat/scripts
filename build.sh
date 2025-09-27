@@ -2,10 +2,10 @@
 
 #Build Script for ziti (OPNCE3)
 #Remove files
+#rm -rf bootable/recovery
 rm -rf hardware/lineage/compat
 rm -rf system/core
 rm -rf system/update_engine
-rm -rf bootable/recovery
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
@@ -35,6 +35,11 @@ git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git 
 croot
 
 #Stock Reverting patches
+#bootable_recovery
+#cd bootable/recovery
+#git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git && git cherry-pick fc8c79dafadb7176b9b962ab02fcec5b5175c51b && git cherry-pick 62e74cc196b3ce6d1b41a9e11499e46e4ff8aa6e && git cherry-pick 52bbdfbc7e27aecfd5dbd21c571bdbca998d4011
+#croot
+
 #system_core
 cd system/core
 git fetch https://github.com/anchalsehrawat/evox_system_core.git && git cherry-pick 978f6b40ba6531490a6c3588f7bb14aa10b279cf
@@ -44,11 +49,6 @@ croot
 cd system/update_engine
 git fetch https://github.com/anchalsehrawat/android_system_update_engine.git && git cherry-pick d804cc2a02e0e94c2d8e9ba47175f3946954306d && git cherry-pick d526f28031438c184746cfe6a038186598180fe6
 croot
-
-#bootable_recovery
-#cd bootable/recovery
-#git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git && git cherry-pick fc8c79dafadb7176b9b962ab02fcec5b5175c51b && git cherry-pick 62e74cc196b3ce6d1b41a9e11499e46e4ff8aa6e && git cherry-pick 52bbdfbc7e27aecfd5dbd21c571bdbca998d4011
-#croot
 
 #For OTA Updates
 #Apps Updater
