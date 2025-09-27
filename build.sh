@@ -5,7 +5,7 @@
 rm -rf hardware/lineage/compat
 rm -rf system/core
 rm -rf system/update_engine
-#rm -rf bootable/recovery
+rm -rf bootable/recovery
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
