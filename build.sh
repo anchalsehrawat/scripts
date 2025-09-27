@@ -5,7 +5,7 @@
 rm -rf hardware/lineage/compat
 rm -rf system/core
 rm -rf system/update_engine
-rm -rf bootable/recovery
+#rm -rf bootable/recovery
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
@@ -46,9 +46,9 @@ git fetch https://github.com/anchalsehrawat/android_system_update_engine.git && 
 croot
 
 #bootable_recovery
-cd bootable/recovery
-git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git && git cherry-pick fc8c79dafadb7176b9b962ab02fcec5b5175c51b && git cherry-pick 62e74cc196b3ce6d1b41a9e11499e46e4ff8aa6e && git cherry-pick 52bbdfbc7e27aecfd5dbd21c571bdbca998d4011
-croot
+#cd bootable/recovery
+#git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git && git cherry-pick fc8c79dafadb7176b9b962ab02fcec5b5175c51b && git cherry-pick 62e74cc196b3ce6d1b41a9e11499e46e4ff8aa6e && git cherry-pick 52bbdfbc7e27aecfd5dbd21c571bdbca998d4011
+#croot
 
 #For OTA Updates
 #Apps Updater
