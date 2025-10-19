@@ -2,23 +2,23 @@
 
 #Build Script for ziti (OPNCE3)
 #Remove files
-#rm -rf bootable/recovery
 rm -rf hardware/lineage/compat
-rm -rf system/core
-rm -rf system/update_engine
-rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
-rm -rf vendor/lineage
+#rm -rf vendor/lineage
+#rm -rf system/core
+#rm -rf bootable/recovery
+#rm -rf system/update_engine
+#rm -rf packages/apps/Updater
 
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/Evolution-X/manifest -b bka --depth 1 --git-lfs
+repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b axion-16 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -41,48 +41,45 @@ croot
 #croot
 
 #system_core
-cd system/core
-git fetch https://github.com/anchalsehrawat/evox_system_core.git && git cherry-pick 978f6b40ba6531490a6c3588f7bb14aa10b279cf
-croot
+#cd system/core
+#git fetch https://github.com/anchalsehrawat/evox_system_core.git && git cherry-pick 978f6b40ba6531490a6c3588f7bb14aa10b279cf
+#croot
 
 #system_update_engine
-cd system/update_engine
-git fetch https://github.com/anchalsehrawat/android_system_update_engine.git && git cherry-pick d804cc2a02e0e94c2d8e9ba47175f3946954306d && git cherry-pick d526f28031438c184746cfe6a038186598180fe6
-croot
+#cd system/update_engine
+#git fetch https://github.com/anchalsehrawat/android_system_update_engine.git && git cherry-pick d804cc2a02e0e94c2d8e9ba47175f3946954306d && git cherry-pick d526f28031438c184746cfe6a038186598180fe6
+#croot
 
 #For OTA Updates
 #Apps Updater
-cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 13f622049a1818e0f5449180e4de51c47afcb2df
-croot
+#cd packages/apps/Updater
+#git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 13f622049a1818e0f5449180e4de51c47afcb2df
+#croot
 
 #Vanilla Updater urls
-cd vendor/lineage
-git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
-croot
+#cd vendor/lineage
+#git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
+#croot
 
 echo "----------------CHERRY-PICKS DONE-----------------"
 
-#Lunch
-lunch lineage_ziti-bp2a-userdebug
-
-#ADB 
-#export WITH_ADB_INSECURE=true
-export TARGET_INCLUDE_ACCORD=true
+#Generate Private keys
+gk -s
 
 #Build GMS
-export WITH_GMS=true
-m evolution
+axion ziti userdebug gms pico
+ax -b -j$(nproc --all) userdebug
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_gms.json
+#mv out/target/product/ziti/GMS/ziti.json .
+#mv ziti.json ax_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-export WITH_GMS=false
-m evolution
+#Vanilla
+axion ziti userdebug va
+ax -b -j$(nproc --all) userdebug
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_vanilla.json
+#mv out/target/product/ziti/VANILLA/ziti.json .
+#mv ziti.json ax_vanilla.json
 echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
