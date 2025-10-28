@@ -35,9 +35,9 @@ croot
 
 #Stock Reverting patches
 #bootable_recovery
-cd bootable/recovery
-git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git lineage-23.0 && git cherry-pick e65c158410d3e7b3d8cc733c6479472126c12cec && git cherry-pick 156301ca7ee62a1e01c14b1beaa99b838892d981 && git cherry-pick 65f6022dd5da75631a53c7b7b0462a86a2863bff
-croot
+#cd bootable/recovery
+#git fetch https://github.com/anchalsehrawat/evox_bootable_recovery.git lineage-23.0 && git cherry-pick e65c158410d3e7b3d8cc733c6479472126c12cec && git cherry-pick 156301ca7ee62a1e01c14b1beaa99b838892d981 && git cherry-pick 65f6022dd5da75631a53c7b7b0462a86a2863bff
+#croot
 
 #system_core
 cd system/core
