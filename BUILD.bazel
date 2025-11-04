@@ -1,1 +1,8 @@
-../../../build/make/target/product/security/BUILD.bazel
+filegroup(
+    name = "android_certificate_directory",
+    srcs = glob([
+        "*.pk8",
+        "*.pem",
+    ]),
+    visibility = ["//visibility:public"],
+)
