@@ -61,6 +61,12 @@ cd vendor/lineage
 git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
 croot
 
+#Sign Priv Keys
+git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
+cd vendor/evolution-priv/keys
+./keys.sh
+croot
+
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
@@ -68,7 +74,7 @@ lunch lineage_ziti-bp2a-userdebug
 
 #ADB 
 #export WITH_ADB_INSECURE=true
-export TARGET_INCLUDE_ACCORD=true
+#export TARGET_INCLUDE_ACCORD=true
 
 #Build GMS
 export WITH_GMS=true
