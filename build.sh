@@ -67,6 +67,11 @@ cd vendor/evolution-priv/keys
 ./keys.sh
 croot
 
+rm -rf vendor/evolution-priv/keys
+echo "-------------------Removed ex----------------------"
+git clone https://github.com/anchalsehrawat/scripts.git -b ex vendor/evolution-priv/keys
+echo "-------------Cloned-------------------"
+
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
