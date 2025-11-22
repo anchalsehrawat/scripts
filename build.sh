@@ -4,11 +4,11 @@
 #Remove files
 rm -rf hardware/lineage/compat
 rm -rf .repo/local_manifests
-rm -rf prebuilts/clang/host/linux-x86
 rm -rf system/core
-rm -rf bootable/recovery
 rm -rf system/update_engine
 rm -rf packages/apps/Updater
+#rm -rf prebuilts/clang/host/linux-x86
+#rm -rf bootable/recovery
 
 echo "----------------DELETED DIRECTORIES----------------"
 
@@ -52,7 +52,7 @@ croot
 #For OTA Updates
 #Apps Updater
 cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-23.0 && git cherry-pick 44b07ecdf60c17270756f2a757835d297b0d894b
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-23.0 && git cherry-pick 706c87119a6871f20e40c8f638cc267c78910e7d
 croot
 
 echo "----------------CHERRY-PICKS DONE-----------------"
