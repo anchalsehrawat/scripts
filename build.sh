@@ -13,11 +13,11 @@ rm -rf packages/apps/Updater
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs
+repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.1 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b axion-16 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b axion-16.1 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
