@@ -12,7 +12,6 @@ rm -rf prebuilts/clang/host/linux-x86
 rm -rf vendor/lineage
 rm -rf vendor/evolution-priv/keys
 rm -rf vendor/oplus/camera
-rm -rf frameworks/base
 
 echo "----------------DELETED DIRECTORIES----------------"
 
