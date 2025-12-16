@@ -8,7 +8,7 @@ rm -rf system/core
 rm -rf system/update_engine
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
-rm -rf prebuilts/clang/host/linux-x86
+#rm -rf prebuilts/clang/host/linux-x86
 rm -rf vendor/evolution-priv/keys
 
 echo "----------------DELETED DIRECTORIES----------------"
@@ -62,9 +62,9 @@ cd vendor/evolution-priv/keys
 ./keys.sh
 croot
 
-#rm -rf vendor/evolution-priv/keys
-#echo "-------------------Removed ex----------------------"
-#git clone https://github.com/anchalsehrawat/scripts.git -b ex vendor/evolution-priv/keys
+rm -rf vendor/evolution-priv/keys
+#echo "-------------------Removed pos----------------------"
+git clone https://github.com/anchalsehrawat/scripts.git -b pos vendor/evolution-priv/keys
 #echo "-------------Cloned-------------------"
 
 echo "----------------CHERRY-PICKS DONE-----------------"
@@ -74,11 +74,10 @@ breakfast ziti
 m pixelos
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/boot.img .
-mv out/target/product/ziti/dtbo.img .
-mv out/target/product/ziti/vbmeta.img .
-mv out/target/product/ziti/vendor_boot.img .
-mv out/target/product/ziti/super_empty.img .
-mv out/target/product/ziti/ziti.json .
+#mv out/target/product/ziti/boot.img .
+#mv out/target/product/ziti/dtbo.img .
+#mv out/target/product/ziti/vbmeta.img .
+#mv out/target/product/ziti/vendor_boot.img .
+#mv out/target/product/ziti/super_empty.img .
 
 echo "--------------MOVED BUILD TO ROOT DIRECTORY--------------"
