@@ -26,6 +26,12 @@ echo "-----------------CLONED local manifest-------------------"
 #Resync
 /opt/crave/resync.sh
 echo "---------------RESYNCED-----------------"
+
+#Crave
+export BUILD_USERNAME=Loid
+export BUILD_HOSTNAME=crave
+export TZ=Asia/Kolkata
+
 #Build Environment
 . build/envsetup.sh
 echo "---------------BUILD ENVIRONMENT------------------"
