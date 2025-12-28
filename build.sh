@@ -11,7 +11,7 @@ rm -rf .repo/local_manifests
 #rm -rf prebuilts/clang/host/linux-x86
 rm -rf vendor/lineage
 rm -rf vendor/evolution-priv/keys
-rm -rf vendor/oplus/camera
+#rm -rf vendor/oplus/camera
 
 echo "----------------DELETED DIRECTORIES----------------"
 
@@ -88,6 +88,8 @@ lunch lineage_ziti-bp3a-userdebug
 export BUILD_USERNAME=Loid
 export BUILD_HOSTNAME=crave
 export TZ=Asia/Kolkata
+#For OPcam
+export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 #Build GMS
 export WITH_GMS=true
