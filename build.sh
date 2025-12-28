@@ -65,6 +65,9 @@ echo "-------------------Removed ax----------------------"
 git clone https://github.com/anchalsehrawat/scripts.git -b ax vendor/lineage-priv/keys
 echo "-------------Cloned-------------------"
 
+#For OPcam
+export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
+
 #Build GMS
 axion ziti userdebug gms pico
 ax -b -j$(nproc --all) userdebug
