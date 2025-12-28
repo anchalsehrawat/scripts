@@ -68,6 +68,8 @@ git clone https://github.com/anchalsehrawat/scripts.git -b pos vendor/evolution-
 #echo "-------------Cloned-------------------"
 
 echo "----------------CHERRY-PICKS DONE-----------------"
+#For OPcam
+export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 breakfast ziti
 
