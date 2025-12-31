@@ -82,7 +82,7 @@ lunch lineage_ziti-bp3a-userdebug
 
 #ADB 
 #export WITH_ADB_INSECURE=true
-#export TARGET_INCLUDE_ACCORD=true
+export TARGET_INCLUDE_ACCORD=true
 
 #Crave
 export BUILD_USERNAME=Loid
@@ -93,6 +93,7 @@ export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 #Build GMS
 export WITH_GMS=true
+export TARGET_USES_MINI_GAPPS=true
 m evolution
 
 mv out/target/product/ziti/*.zip .
