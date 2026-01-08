@@ -4,13 +4,13 @@
 #Remove files
 #rm -rf bootable/recovery
 rm -rf hardware/lineage/compat
-rm -rf system/core
-rm -rf system/update_engine
+#rm -rf system/core
+#rm -rf system/update_engine
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 #rm -rf prebuilts/clang/host/linux-x86
-rm -rf vendor/lineage
-rm -rf vendor/evolution-priv/keys
+#rm -rf vendor/lineage
+#rm -rf vendor/evolution-priv/keys
 #rm -rf vendor/oplus/camera
 
 echo "----------------DELETED DIRECTORIES----------------"
@@ -44,14 +44,14 @@ croot
 #croot
 
 #system_core
-cd system/core
-git fetch https://github.com/anchalsehrawat/evox_system_core.git && git cherry-pick 978f6b40ba6531490a6c3588f7bb14aa10b279cf
-croot
+#cd system/core
+#git fetch https://github.com/anchalsehrawat/evox_system_core.git && git cherry-pick 978f6b40ba6531490a6c3588f7bb14aa10b279cf
+#croot
 
 #system_update_engine
-cd system/update_engine
-git fetch https://github.com/anchalsehrawat/android_system_update_engine.git && git cherry-pick d804cc2a02e0e94c2d8e9ba47175f3946954306d && git cherry-pick d526f28031438c184746cfe6a038186598180fe6
-croot
+#cd system/update_engine
+#git fetch https://github.com/anchalsehrawat/android_system_update_engine.git && git cherry-pick d804cc2a02e0e94c2d8e9ba47175f3946954306d && git cherry-pick d526f28031438c184746cfe6a038186598180fe6
+#croot
 
 #For OTA Updates
 #Apps Updater
@@ -60,15 +60,15 @@ git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && gi
 croot
 
 #Vanilla Updater urls
-cd vendor/lineage
-git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
-croot
+#cd vendor/lineage
+#git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
+#croot
 
 #Sign Priv Keys
-git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
-cd vendor/evolution-priv/keys
-./keys.sh
-croot
+#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
+#cd vendor/evolution-priv/keys
+#./keys.sh
+#croot
 
 rm -rf vendor/evolution-priv/keys
 echo "-------------------Removed ex----------------------"
