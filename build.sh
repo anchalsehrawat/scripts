@@ -94,6 +94,8 @@ export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 #Build GMS
 export WITH_GMS=true
 export TARGET_USES_MINI_GAPPS=true
+export TARGET_INCLUDE_LIVE_WALLPAPERS=true
+
 m evolution
 
 mv out/target/product/ziti/*.zip .
