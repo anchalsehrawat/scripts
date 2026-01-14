@@ -16,11 +16,11 @@ rm -rf .repo/local_manifests
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/Evolution-X/manifest -b bq1 --depth 1 --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b bq2 --depth 1 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16.1 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16.2 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -78,7 +78,7 @@ echo "-------------Cloned-------------------"
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
-lunch lineage_ziti-bp3a-userdebug
+lunch lineage_ziti-bp4a-userdebug
 
 #ADB 
 #export WITH_ADB_INSECURE=true
