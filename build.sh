@@ -34,8 +34,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #Cherry-picks
 #hardware_lineage_compat
 cd hardware/lineage/compat
-git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git && git cherry-pick 4a3e05b445745110ec17b89e3976645744bcacf0
-git fetch https://github.com/mvimal2607/hardware_lineage_compat.git && git cherry-pick d0727d7dba3ad73799a5aaf3aebe03a34337b9bc
+git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git -t sixteen && git cherry-pick 6f6bbb4a686ac367383584a183ebe31ee5d4b0e1 6a8ac15383a76806b807aaf70b3f6d98b907ec02
 croot
 
 #Stock Reverting patches
@@ -79,7 +78,7 @@ echo "-------------Cloned-------------------"
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
-lunch lineage_ziti-bp4a-userdebug
+lunch lineage_ziti-bp4a-user
 
 #ADB 
 #export WITH_ADB_INSECURE=true
