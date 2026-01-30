@@ -65,14 +65,14 @@ croot
 #croot
 
 #Sign Priv Keys
-#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
-#cd vendor/evolution-priv/keys
-#./keys.sh
-#croot
+git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
+cd vendor/evolution-priv/keys
+./keys.sh
+croot
 
-rm -rf vendor/evolution-priv/keys
-echo "-------------------Removed ex----------------------"
-git clone https://github.com/anchalsehrawat/scripts.git -b ex vendor/evolution-priv/keys
+#rm -rf vendor/evolution-priv/keys
+#echo "-------------------Removed ex----------------------"
+#git clone https://github.com/anchalsehrawat/scripts.git -b ex vendor/evolution-priv/keys
 echo "-------------Cloned-------------------"
 
 echo "----------------CHERRY-PICKS DONE-----------------"
@@ -93,7 +93,7 @@ export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 #Build GMS
 export WITH_GMS=true
-#export TARGET_USES_MINI_GAPPS=true
+export TARGET_USES_MINI_GAPPS=true
 #export TARGET_INCLUDE_LIVE_WALLPAPERS=true
 
 m evolution
