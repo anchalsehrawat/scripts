@@ -10,7 +10,7 @@ rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 #rm -rf prebuilts/clang/host/linux-x86
 #rm -rf vendor/lineage
-#rm -rf vendor/evolution-priv/keys
+rm -rf vendor/evolution-priv/keys
 #rm -rf vendor/oplus/camera
 
 echo "----------------DELETED DIRECTORIES----------------"
