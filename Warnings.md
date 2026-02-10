@@ -27,5 +27,6 @@ Rest you can use your device as you wish.
 - [Telegram Update Channel](https://t.me/oneplusnordce3channel) 
 
 ** I'm not to be blamed for any of your mishaps.  
-<img width="498" height="278" alt="image" src="https://github.com/user-attachments/assets/a8ccd224-ebbe-483b-8477-9fa9e3616b8b" />
+
+<img width="498" height="278" alt="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWVxNmttcWM4bm5yZ2U1M3k3bWV2d2FiNHA4dXl1a2d2ODg2d2RqNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MOWPkhRAUbR7i/giphy.gif" />
 
