@@ -39,7 +39,8 @@ croot
 #echo "-------------------Removed ex----------------------"
 #git clone https://github.com/anchalsehrawat/scripts.git -b ex-qp2 vendor/evolution-priv/keys
 echo "-------------Cloned-------------------"
-
+export TARGET_SUPPORTS_BLUR=true
+export TARGET_HAS_UDFPS=true
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 brunch ziti
 
