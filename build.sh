@@ -30,10 +30,10 @@ croot
 
 #Sign Priv Keys
 rm -rf vendor/lineage-priv/keys
-git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/lineage-priv/keys
-cd vendor/lineage-priv/keys
-./keys.sh
-croot
+#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/lineage-priv/keys
+#cd vendor/lineage-priv/keys
+#./keys.sh
+#croot
 
 #rm -rf vendor/lineage-priv/keys
 #echo "-------------------Removed ex----------------------"
