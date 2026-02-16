@@ -4,7 +4,6 @@
 #Remove files
 rm -rf hardware/lineage/compat
 rm -rf .repo/local_manifests
-rm -rf packages/apps/DolbyAtmos
 
 echo "----------------DELETED DIRECTORIES----------------"
 
@@ -24,6 +23,7 @@ echo "---------------RESYNCED-----------------"
 . build/envsetup.sh
 echo "---------------BUILD ENVIRONMENT------------------"
 
+rm -rf packages/apps/DolbyAtmos
 #Cherry-picks
 #hardware_lineage_compat
 cd hardware/lineage/compat
