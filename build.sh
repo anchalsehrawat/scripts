@@ -4,6 +4,8 @@
 #Remove files
 rm -rf hardware/lineage/compat
 rm -rf .repo/local_manifests
+rm -rf packages/apps/DolbyAtmos
+
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
