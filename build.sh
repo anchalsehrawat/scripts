@@ -108,10 +108,10 @@ mv out/target/product/ziti/ziti.json .
 mv ziti.json ziti_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-#export WITH_GMS=false
-#m evolution
+export WITH_GMS=false
+m evolution
 
-#mv out/target/product/ziti/*.zip .
-#mv out/target/product/ziti/ziti.json .
-#mv ziti.json ziti_vanilla.json
+mv out/target/product/ziti/*.zip .
+mv out/target/product/ziti/ziti.json .
+mv ziti.json ziti_vanilla.json
 #echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
