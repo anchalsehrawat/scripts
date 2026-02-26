@@ -19,7 +19,7 @@ repo init -u https://github.com/Evolution-X/manifest -b bq2 --depth 1 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16.2-ksun .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16.2 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -92,6 +92,7 @@ export TZ=Asia/Kolkata
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 #Build GMS
+export TORCH_STR_SUPPORTED=true
 export WITH_GMS=true
 export TARGET_USES_MINI_GAPPS=true
 #export TARGET_INCLUDE_LIVE_WALLPAPERS=true
@@ -104,14 +105,14 @@ m evolution
 #mv out/target/product/ziti/vendor_boot.img .
 #mv out/target/product/ziti/super_empty.img .
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_gms.json
+#mv out/target/product/ziti/ziti.json .
+#mv ziti.json ziti_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-export WITH_GMS=false
-m evolution
+#export WITH_GMS=false
+#m evolution
 
-mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_vanilla.json
+#mv out/target/product/ziti/*.zip .
+#mv out/target/product/ziti/ziti.json .
+#mv ziti.json ziti_vanilla.json
 #echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
