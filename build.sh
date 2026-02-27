@@ -10,7 +10,7 @@ rm -rf packages/apps/Settings/YASP
 rm -rf vendor/themes
 rm -rf vendor/yaap
 rm -rf packages/apps/Settings
-rm -rf frameworks/av
+#rm -rf frameworks/av
 rm -rf packages/apps/OpenDelta
 
 #echo "----------------DELETED DIRECTORIES----------------"
