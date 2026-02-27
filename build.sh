@@ -62,9 +62,9 @@ cd packages/apps/Settings
 git fetch https://github.com/F6-test/yaap_apps_Settings.git --depth 10 && git cherry-pick 05da52a7792824f67fe2e660f278a5b0d2fe7f52^..0e6359599fc63c65c4e669ae1941186f87b98582
 croot
 
-cd frameworks/av
-git fetch https://github.com/F6-test/yaap_frameworks_av.git --depth 20 && git cherry-pick 14acca79f4da7a9725a44fb306ffb3efbe6a4e12^..b43ba24a75c855fc10d61594997a55601cf011f7
-croot
+#cd frameworks/av
+#git fetch https://github.com/F6-test/yaap_frameworks_av.git --depth 20 && git cherry-pick 14acca79f4da7a9725a44fb306ffb3efbe6a4e12^..b43ba24a75c855fc10d61594997a55601cf011f7
+#croot
 
 cd packages/apps/OpenDelta
 git fetch https://github.com/anchalsehrawat/packages_apps_OpenDelta.git && git cherry-pick d6347c0d71f7997d7b8a7de45db9fc7168a75674
