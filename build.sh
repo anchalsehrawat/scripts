@@ -13,10 +13,10 @@ rm -rf packages/apps/Settings
 rm -rf frameworks/av
 rm -rf packages/apps/OpenDelta
 
-echo "----------------DELETED DIRECTORIES----------------"
+#echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs
+repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs --depth 1
 echo "-----------------REPO INITIALISED------------------"
 
 #Local Manifest
@@ -25,7 +25,7 @@ echo "--------------CLONED local manifest----------------"
 
 #Resync
 /opt/crave/resync.sh
-echo "---------------------RESYNCED----------------------"
+#echo "---------------------RESYNCED----------------------"
 #Build Environment
 . build/envsetup.sh
 echo "---------------BUILD ENVIRONMENT-------------------"
@@ -42,7 +42,7 @@ croot
 cd frameworks/base
 git fetch https://github.com/anchalsehrawat/frameworks_base.git --depth 5 && git cherry-pick 5aed5b38b5b6e0d5a6755d4d2729127ad4fddb78
 git fetch https://github.com/mvimal2607/frameworks_base.git --depth 4 && git cherry-pick aa688eeb432c9279db86e684c9af586e39aba1e3
-git fetch https://github.com/F6-test/frameworks_base_yaap.git && git cherry-pick 0cdd5842df667c1d0b77049f3cf2f066606e51d0^..aeeffa1e2c62a4f81e3da5103242db93a7b9f056
+git fetch https://github.com/F6-test/frameworks_base_yaap.git && git cherry-pick 0cdd5842df667c1d0b77049f3cf2f066606e51d0^..aeeffa1e2c62a4f81e3da5103242db93a7b9f056 && git cherry-pick cf5eb51461a356f29679b909f20ade01d28ea151^..e4a568caf2c60ade66a07837de17a0ab6bf50e98
 croot
 
 cd packages/apps/Settings/YASP
@@ -70,7 +70,7 @@ cd packages/apps/OpenDelta
 git fetch https://github.com/anchalsehrawat/packages_apps_OpenDelta.git && git cherry-pick d6347c0d71f7997d7b8a7de45db9fc7168a75674
 croot
 
-echo "----------------CHERRY-PICKS DONE------------------"
+#echo "----------------CHERRY-PICKS DONE------------------"
 
 rm -rf vendor/yaap/signing/keys
 git clone https://github.com/anchalsehrawat/scripts.git -b yp vendor/yaap/signing/keys
