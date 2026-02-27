@@ -42,7 +42,7 @@ croot
 cd frameworks/base
 git fetch https://github.com/anchalsehrawat/frameworks_base.git --depth 5 && git cherry-pick 5aed5b38b5b6e0d5a6755d4d2729127ad4fddb78
 git fetch https://github.com/mvimal2607/frameworks_base.git --depth 4 && git cherry-pick aa688eeb432c9279db86e684c9af586e39aba1e3
-git fetch https://github.com/F6-test/frameworks_base_yaap.git && git cherry-pick 0cdd5842df667c1d0b77049f3cf2f066606e51d0^..aeeffa1e2c62a4f81e3da5103242db93a7b9f056 && git cherry-pick cf5eb51461a356f29679b909f20ade01d28ea151^..e4a568caf2c60ade66a07837de17a0ab6bf50e98
+git fetch https://github.com/F6-test/frameworks_base_yaap.git && git cherry-pick 0cdd5842df667c1d0b77049f3cf2f066606e51d0 e07aecaba95ea4a10fbbdf7956f55ac5e5c83f71 a218152c6efc803126e1c48981ce13acea12a89c 0cb37d34d846aaf885376041935ed658648aba94 fb548d7e12014daaecec89395e6b8319c77d698b aeeffa1e2c62a4f81e3da5103242db93a7b9f056 && git cherry-pick cf5eb51461a356f29679b909f20ade01d28ea151^..e4a568caf2c60ade66a07837de17a0ab6bf50e98
 croot
 
 cd packages/apps/Settings/YASP
@@ -55,7 +55,7 @@ croot
 
 cd vendor/yaap
 git fetch https://github.com/anchalsehrawat/vendor_yaap.git && git cherry-pick 74eeddb39c9ccf66d0cf00dd21cfb44f7136f794 f20efeb17d78268f3b922af169f6de6b6070ba8e
-git fetch https://github.com/F6-test/vendor_yaap.git --depth 10 && git cherry-pick 9fcb4d5ac273eb466a3392c2dc4e05338a4556f2 7fdd13a86ceb6018b1161b6901c49c6b9eb27a8e
+git fetch https://github.com/F6-test/vendor_yaap.git --depth 10 && git cherry-pick 9fcb4d5ac273eb466a3392c2dc4e05338a4556f2
 croot
 
 cd packages/apps/Settings
