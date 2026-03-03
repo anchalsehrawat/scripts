@@ -24,22 +24,16 @@ echo "---------------RESYNCED-----------------"
 echo "---------------BUILD ENVIRONMENT------------------"
 
 rm -rf packages/apps/DolbyAtmos
-#Cherry-picks
-#hardware_lineage_compat
+
 cd hardware/lineage/compat
 git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git -t sixteen && git cherry-pick 6f6bbb4a686ac367383584a183ebe31ee5d4b0e1 6a8ac15383a76806b807aaf70b3f6d98b907ec02
 croot
 
 #Sign Priv Keys
 rm -rf vendor/lineage-priv/keys
-#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/lineage-priv/keys
-#cd vendor/lineage-priv/keys
-#./keys.sh
-#croot
+git clone https://github.com/anchalsehrawat/scripts.git -b crk vendor/lineage-priv/keys
+croot
 
-#rm -rf vendor/lineage-priv/keys
-#echo "-------------------Removed ex----------------------"
-#git clone https://github.com/anchalsehrawat/scripts.git -b ex-qp2 vendor/evolution-priv/keys
 echo "-------------Cloned-------------------"
 export TARGET_SUPPORTS_BLUR=true
 export TARGET_HAS_UDFPS=true
