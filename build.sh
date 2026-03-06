@@ -19,7 +19,7 @@ repo init -u https://github.com/Evolution-X/manifest -b bq2 --depth 1 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16.2 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16.2-ksun .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -109,10 +109,10 @@ mv out/target/product/ziti/*.zip .
 #mv ziti.json ziti_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-#export WITH_GMS=false
-#m evolution
+export WITH_GMS=false
+m evolution
 
-#mv out/target/product/ziti/*.zip .
+mv out/target/product/ziti/*.zip .
 #mv out/target/product/ziti/ziti.json .
 #mv ziti.json ziti_vanilla.json
 #echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
