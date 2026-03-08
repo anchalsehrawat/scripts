@@ -90,7 +90,8 @@ export BUILD_HOSTNAME=crave
 export TZ=Asia/Kolkata
 #For OPcam
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
-
+#FM
+export TARGET_HAS_FM=true
 #Build GMS
 export WITH_GMS=true
 export TARGET_USES_MINI_GAPPS=true
