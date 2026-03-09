@@ -91,7 +91,7 @@ export TZ=Asia/Kolkata
 #For OPcam
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 #FM
-export TARGET_HAS_FM=true
+#export TARGET_HAS_FM=true
 #Build GMS
 export WITH_GMS=true
 export TARGET_USES_MINI_GAPPS=true
@@ -110,9 +110,9 @@ mv ziti.json ziti_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
 export WITH_GMS=false
-#m evolution
+m evolution
 
-#mv out/target/product/ziti/*.zip .
-#mv out/target/product/ziti/ziti.json .
-#mv ziti.json ziti_vanilla.json
+mv out/target/product/ziti/*.zip .
+mv out/target/product/ziti/ziti.json .
+mv ziti.json ziti_vanilla.json
 #echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
