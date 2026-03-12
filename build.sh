@@ -31,11 +31,6 @@ echo "--------------CLONED local manifest----------------"
 echo "---------------BUILD ENVIRONMENT-------------------"
 
 #Cherry-picks
-
-cd hardware/oplus
-git fetch https://github.com/anchalsehrawat/android_hardware_oplus.git -t yaap-mv && git cherry-pick 0a12fd5bd05b2deedc7fe8337deb7fc6ab5bfd2a
-croot
-
 cd hardware/lineage/compat
 git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git -t sixteen && git cherry-pick 6f6bbb4a686ac367383584a183ebe31ee5d4b0e1 6a8ac15383a76806b807aaf70b3f6d98b907ec02
 croot
@@ -91,11 +86,11 @@ cp -r out/target/product/ziti/YAAP-16* .
 #mv ziti.json ziti_gms.json
 echo "---------------GMS BUILD COMPLETE--------------"
 
-#lunch yaap_ziti-user
-#export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
-#export TARGET_BUILD_GAPPS=false
-#m yaap
+lunch yaap_ziti-user
+export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
+export TARGET_BUILD_GAPPS=false
+m yaap
 
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_vanilla.json
+#mv out/target/product/ziti/ziti.json .
+#mv ziti.json ziti_vanilla.json
 echo "---------------VANILLA BUILD COMPLETE------------------"
