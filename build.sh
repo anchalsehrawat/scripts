@@ -11,7 +11,7 @@ rm -rf vendor/themes
 rm -rf vendor/yaap
 rm -rf packages/apps/Settings
 #rm -rf frameworks/av
-#rm -rf packages/apps/OpenDelta
+rm -rf packages/apps/OpenDelta
 
 #echo "----------------DELETED DIRECTORIES----------------"
 
@@ -67,9 +67,9 @@ croot
 #git fetch https://github.com/F6-test/yaap_frameworks_av.git --depth 20 && git cherry-pick 14acca79f4da7a9725a44fb306ffb3efbe6a4e12^..b43ba24a75c855fc10d61594997a55601cf011f7
 #croot
 
-#cd packages/apps/OpenDelta
-#git fetch https://github.com/anchalsehrawat/packages_apps_OpenDelta.git && git cherry-pick d6347c0d71f7997d7b8a7de45db9fc7168a75674
-#croot
+cd packages/apps/OpenDelta
+git fetch https://github.com/anchalsehrawat/packages_apps_OpenDelta.git && git cherry-pick d6347c0d71f7997d7b8a7de45db9fc7168a75674
+croot
 
 #echo "----------------CHERRY-PICKS DONE------------------"
 
