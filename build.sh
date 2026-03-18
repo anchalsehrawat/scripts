@@ -20,7 +20,7 @@ repo init -u https://github.com/yaap/manifest.git -b sixteen --git-lfs --depth 1
 echo "-----------------REPO INITIALISED------------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b yaap-16.2-test .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b yaap-16.2 .repo/local_manifests
 echo "--------------CLONED local manifest----------------"
 
 #Resync
