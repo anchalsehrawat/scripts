@@ -36,17 +36,17 @@ cd packages/apps/Updater
 git fetch https://github.com/anchalsehrawat/android_packages_apps_Updater.git && git cherry-pick eaf3e38aa252fac7bf11ff74185eff63065d718e
 croot
 
+echo "----------------CHERRY-PICKS DONE-----------------"
 #Sign Priv Keys
 #echo "-------------------Removed pos----------------------"
-#git clone https://github.com/anchalsehrawat/scripts.git -b pos 
-#echo "-------------Cloned-------------------"
-
-echo "----------------CHERRY-PICKS DONE-----------------"
+git clone https://github.com/anchalsehrawat/scripts.git -b pk vendor/lineage-priv/keys
+cd vendor/lineage-priv/keys
+./gen_keys.py
+croot
+echo "-------------Cloned-------------------"
 #For OPcam
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
-
 breakfast ziti
-
 m pixelos
 
 mv out/target/product/ziti/*.zip .
