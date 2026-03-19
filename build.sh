@@ -5,6 +5,7 @@
 rm -rf hardware/lineage/compat
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
+rm -rf vendor/lineage-priv/keys
 #rm -rf prebuilts/clang/host/linux-x86
 
 echo "----------------DELETED DIRECTORIES----------------"
