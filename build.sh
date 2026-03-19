@@ -5,7 +5,6 @@
 rm -rf hardware/lineage/compat
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
-rm -rf vendor/lineage-priv/keys
 #rm -rf prebuilts/clang/host/linux-x86
 
 echo "----------------DELETED DIRECTORIES----------------"
@@ -39,11 +38,12 @@ croot
 
 echo "----------------CHERRY-PICKS DONE-----------------"
 #Sign Priv Keys
-#echo "-------------------Removed pos----------------------"
-git clone https://github.com/anchalsehrawat/scripts.git -b pk vendor/lineage-priv/keys
-cd vendor/lineage-priv/keys
-./gen_keys.py
-croot
+rm -rf vendor/lineage-priv/keys
+echo "-------------------Removed pos----------------------"
+git clone https://github.com/anchalsehrawat/scripts.git -b aospk vendor/lineage-priv/keys
+#cd vendor/lineage-priv/keys
+#./gen_keys.py
+#croot
 echo "-------------Cloned-------------------"
 #For OPcam
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
