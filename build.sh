@@ -38,9 +38,9 @@ croot
 
 echo "----------------CHERRY-PICKS DONE-----------------"
 #Sign Priv Keys
-rm -rf vendor/lineage-priv/keys
-echo "-------------------Removed pos----------------------"
-git clone https://github.com/anchalsehrawat/scripts.git -b aospk vendor/lineage-priv/keys
+#rm -rf vendor/lineage-priv/keys
+#echo "-------------------Removed pos----------------------"
+#git clone https://github.com/anchalsehrawat/scripts.git -b aospk vendor/lineage-priv/keys
 #cd vendor/lineage-priv/keys
 #./gen_keys.py
 #croot
