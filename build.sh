@@ -64,17 +64,16 @@ croot
 #croot
 
 #Sign Priv Keys
-#rm -rf vendor/evolution-priv/keys
-#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
-#cd vendor/evolution-priv/keys
-#./keys.sh
-#croot
-
 rm -rf vendor/evolution-priv/keys
-echo "-------------------Removed ex----------------------"
-git clone https://github.com/anchalsehrawat/scripts.git -b ex-qp2 vendor/evolution-priv/keys
-echo "-------------Cloned-------------------"
+git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
+cd vendor/evolution-priv/keys
+./keys.sh
+croot
 
+#rm -rf vendor/evolution-priv/keys
+#echo "-------------------Removed ex----------------------"
+#git clone https://github.com/anchalsehrawat/scripts.git -b ex-qp2 vendor/evolution-priv/keys
+#echo "-------------Cloned-------------------"
 echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Lunch
@@ -82,12 +81,6 @@ lunch lineage_ziti-bp4a-userdebug
 
 #ADB 
 #export WITH_ADB_INSECURE=true
-export TARGET_INCLUDE_ACCORD=true
-
-#Crave
-export BUILD_USERNAME=Loid
-export BUILD_HOSTNAME=crave
-export TZ=Asia/Kolkata
 #For OPcam
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
