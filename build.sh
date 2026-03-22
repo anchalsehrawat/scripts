@@ -63,18 +63,19 @@ croot
 #git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
 #croot
 
-#Sign Priv Keys
-rm -rf vendor/evolution-priv/keys
-git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
-cd vendor/evolution-priv/keys
-./keys.sh
-croot
-
-#rm -rf vendor/evolution-priv/keys
-#echo "-------------------Removed ex----------------------"
-#git clone https://github.com/anchalsehrawat/scripts.git -b ex-qp2 vendor/evolution-priv/keys
-#echo "-------------Cloned-------------------"
 echo "----------------CHERRY-PICKS DONE-----------------"
+
+#Sign Priv Keys
+#rm -rf vendor/evolution-priv/keys
+#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
+#cd vendor/evolution-priv/keys
+#./keys.sh
+#croot
+
+rm -rf vendor/evolution-priv/keys
+echo "-------------------Removed ex----------------------"
+git clone https://github.com/anchalsehrawat/scripts.git -b exk vendor/evolution-priv/keys
+echo "-------------Cloned-------------------"
 
 #Lunch
 lunch lineage_ziti-bp4a-userdebug
@@ -92,11 +93,11 @@ export TARGET_USES_MINI_GAPPS=true
 m evolution
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/boot.img .
-mv out/target/product/ziti/dtbo.img .
-mv out/target/product/ziti/vbmeta.img .
-mv out/target/product/ziti/vendor_boot.img .
-mv out/target/product/ziti/super_empty.img .
+#mv out/target/product/ziti/boot.img .
+#mv out/target/product/ziti/dtbo.img .
+#mv out/target/product/ziti/vbmeta.img .
+#mv out/target/product/ziti/vendor_boot.img .
+#mv out/target/product/ziti/super_empty.img .
 mv out/target/product/ziti/ziti.json .
 mv ziti.json ziti_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
