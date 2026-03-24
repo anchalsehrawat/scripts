@@ -8,6 +8,7 @@ rm -rf hardware/lineage/compat
 #rm -rf system/update_engine
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
+#rm -rf frameworks/base
 #rm -rf prebuilts/clang/host/linux-x86
 #rm -rf vendor/lineage
 #rm -rf vendor/oplus/camera
@@ -58,6 +59,10 @@ cd packages/apps/Updater
 git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 13f622049a1818e0f5449180e4de51c47afcb2df
 croot
 
+cd frameworks/base
+git fetch https://github.com/anchalsehrawat/evox_frameworks_base.git -t bq2-fix && git cherry-pick 573fac673693a5d3bdb25ad0767f991f2ec1fbad faed489605a2962d81598db405d8e3608b23b18b
+croot
+
 #Vanilla Updater urls
 #cd vendor/lineage
 #git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
@@ -102,10 +107,10 @@ mv out/target/product/ziti/ziti.json .
 mv ziti.json ziti_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-export WITH_GMS=false
-m evolution
+#export WITH_GMS=false
+#m evolution
 
-mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_vanilla.json
+#mv out/target/product/ziti/*.zip .
+#mv out/target/product/ziti/ziti.json .
+#mv ziti.json ziti_vanilla.json
 echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
