@@ -8,7 +8,7 @@ rm -rf hardware/lineage/compat
 #rm -rf system/update_engine
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
-#rm -rf frameworks/base
+rm -rf frameworks/base
 #rm -rf prebuilts/clang/host/linux-x86
 #rm -rf vendor/lineage
 #rm -rf vendor/oplus/camera
@@ -77,10 +77,10 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 #./keys.sh
 #croot
 
-rm -rf vendor/evolution-priv/keys
-echo "-------------------Removed ex----------------------"
-git clone https://github.com/anchalsehrawat/scripts.git -b exk vendor/evolution-priv/keys
-echo "-------------Cloned-------------------"
+#rm -rf vendor/evolution-priv/keys
+#echo "-------------------Removed ex----------------------"
+#git clone https://github.com/anchalsehrawat/scripts.git -b exk vendor/evolution-priv/keys
+#echo "-------------Cloned-------------------"
 
 #Lunch
 lunch lineage_ziti-bp4a-userdebug
