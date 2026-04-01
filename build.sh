@@ -57,7 +57,9 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 #rm -rf vendor/evolution-priv/keys/
 #git clone https://github.com/anchalsehrawat/scripts.git -b exk vendor/evolution-priv/keys
 
-#cd vendor/evolution-priv/
+#cd vendor/
+#mkdir evolution-priv/
+#cd evolution-priv/
 #rm -rf keys/
 #wget https://github.com/anchalsehrawat/scripts/releases/download/exk/exk.zip
 #unzip exk.zip
