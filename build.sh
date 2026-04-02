@@ -66,8 +66,10 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #croot
 #echo "-------------Cloned k-------------------"
 
-rm -rf kernel/oneplus/sm8350
-git clone https://github.com/anchalsehrawat/android_kernel_oneplus_sm8350 -b los-23.2-ksun-bkp kernel/oneplus/sm8350
+#rm -rf kernel/oneplus/sm8350
+#git clone https://github.com/anchalsehrawat/android_kernel_oneplus_sm8350 -b los-23.2-ksun-bkp kernel/oneplus/sm8350
+rm -rf device/oneplus/sm8350-common
+git clone https://github.com/anchalsehrawat/android_device_oneplus_sm8350-common -b evox-16.2-test device/oneplus/sm8350-common
 
 #Lunch
 lunch lineage_ziti-bp4a-userdebug
