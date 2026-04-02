@@ -5,7 +5,7 @@
 rm -rf hardware/lineage/compat
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
-rm -rf frameworks/base
+#rm -rf frameworks/base
 
 #echo "----------------DELETED DIRECTORIES----------------"
 
