@@ -66,8 +66,8 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 #croot
 #echo "-------------Cloned k-------------------"
 
-rm -rf kernel/oneplus/sm8350
-git clone https://github.com/anchalsehrawat/android_kernel_oneplus_sm8350 -b los-23.2-ksun-bkp kernel/oneplus/sm8350
+#rm -rf kernel/oneplus/sm8350
+#git clone https://github.com/anchalsehrawat/android_kernel_oneplus_sm8350 -b los-23.2-ksun-bkp kernel/oneplus/sm8350
 #rm -rf device/oneplus/sm8350-common
 #git clone https://github.com/anchalsehrawat/android_device_oneplus_sm8350-common -b evox-16.2-test device/oneplus/sm8350-common
 
@@ -80,13 +80,13 @@ lunch lineage_ziti-bp4a-userdebug
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 #Build GMS
-#export WITH_GMS=true
-#export TARGET_USES_MINI_GAPPS=true
+export WITH_GMS=true
+export TARGET_USES_MINI_GAPPS=true
 #export TARGET_INCLUDE_LIVE_WALLPAPERS=true
 
-#m evolution
+m evolution
 
-#mv out/target/product/ziti/*.zip .
+mv out/target/product/ziti/*.zip .
 #mv out/target/product/ziti/boot.img .
 #mv out/target/product/ziti/dtbo.img .
 #mv out/target/product/ziti/vbmeta.img .
@@ -96,10 +96,10 @@ export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 #mv ziti.json ziti_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-export WITH_GMS=false
-m evolution
+#export WITH_GMS=false
+#m evolution
 
-mv out/target/product/ziti/*.zip .
+#mv out/target/product/ziti/*.zip .
 #mv out/target/product/ziti/ziti.json .
 #mv ziti.json ziti_vanilla.json
 #echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
