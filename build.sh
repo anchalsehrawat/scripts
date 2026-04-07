@@ -44,14 +44,14 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 #cd vendor/lineage-priv/keys
 #./gen_keys.py
 #croot
-rm -rf vendor/lineage-priv/keys
-cd vendor
-mkdir lineage-priv/
-cd lineage-priv/
-wget https://github.com/anchalsehrawat/scripts/releases/download/pix/pixkey.zip
-unzip pixkey.zip
-rm pixkey.zip
-croot
+#rm -rf vendor/lineage-priv/keys
+#cd vendor
+#mkdir lineage-priv/
+#cd lineage-priv/
+#wget https://github.com/anchalsehrawat/scripts/releases/download/pix/pixkey.zip
+#unzip pixkey.zip
+#rm pixkey.zip
+#croot
 
 echo "-------------Cloned-------------------"
 #For OPcam
