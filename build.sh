@@ -5,17 +5,15 @@
 rm -rf hardware/lineage/compat
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
-#rm -rf frameworks/base
-#rm -rf vendor/lineage
 
 echo "----------------DELETED DIRECTORIES----------------"
 
 #Initialise repos
-repo init -u https://github.com/Evolution-X/manifest -b bq2 --depth 1 --git-lfs
+repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.2 --git-lfs
 echo "--------------REPO INITIALISED---------------"
 
 #Local Manifest
-git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b evox-16.2 .repo/local_manifests
+git clone https://github.com/anchalsehrawat/local_manifests --depth 1 -b axion-16.2 .repo/local_manifests
 echo "-----------------CLONED local manifest-------------------"
 
 #Resync
@@ -33,69 +31,41 @@ git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git 
 croot
 
 cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 13f622049a1818e0f5449180e4de51c47afcb2df
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-23.2 && git cherry-pick f69ef4232aa0ef3c701a577807f35831e2c286c7
 croot
-
-#cd frameworks/base
-#git fetch https://github.com/anchalsehrawat/evox_frameworks_base.git -t bq2-fix && git cherry-pick 573fac673693a5d3bdb25ad0767f991f2ec1fbad faed489605a2962d81598db405d8e3608b23b18b
-#croot
-
-#Vanilla Updater urls
-#cd vendor/lineage
-#git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
-#croot
 
 echo "----------------CHERRY-PICKS DONE-----------------"
 
-#Sign Priv Keys
-#rm -rf vendor/evolution-priv/keys
-#git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys
-#cd vendor/evolution-priv/keys
-#./keys.sh
-#croot
+#Generate Private keys
+gk -s
+#echo "-------------------generated ax--------------------"
+#rm -rf vendor/lineage-priv/keys
+#echo "-------------------Removed ax----------------------"
+#git clone https://github.com/anchalsehrawat/scripts.git -b ax vendor/lineage-priv/keys
+#echo "-------------Cloned-------------------"
 
-#rm -rf vendor/evolution-priv/keys/
-#git clone https://github.com/anchalsehrawat/scripts.git -b exk vendor/evolution-priv/keys
-
-#cd vendor/
-#mkdir evolution-priv/
-#cd evolution-priv/
-#rm -rf keys/
-#wget https://github.com/anchalsehrawat/scripts/releases/download/exk/exk.zip
-#unzip exk.zip
-#rm exk.zip
-#croot
-#echo "-------------Cloned k-------------------"
-
-#Lunch
-lunch lineage_ziti-bp4a-userdebug
-
-#ADB 
-#export WITH_ADB_INSECURE=true
 #For OPcam
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 #Build GMS
-export WITH_GMS=true
-export TARGET_USES_MINI_GAPPS=true
-#export TARGET_INCLUDE_LIVE_WALLPAPERS=true
-
-m evolution
+axion ziti userdebug gms core
+ax -b -j$(nproc --all) userdebug
 
 mv out/target/product/ziti/*.zip .
-#mv out/target/product/ziti/boot.img .
-#mv out/target/product/ziti/dtbo.img .
-#mv out/target/product/ziti/vbmeta.img .
-#mv out/target/product/ziti/vendor_boot.img .
-#mv out/target/product/ziti/super_empty.img .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_gms.json
+mv out/target/product/ziti/boot.img .
+mv out/target/product/ziti/dtbo.img .
+mv out/target/product/ziti/vendor_boot.img .
+mv out/target/product/ziti/super_empty.img .
+mv out/target/product/ziti/vbmeta.img .
+mv out/target/product/ziti/GMS/ziti.json .
+mv ziti.json ax_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-#export WITH_GMS=false
-#m evolution
+#Vanilla
+#axion ziti userdebug va
+#ax -b -j$(nproc --all) userdebug
 
 #mv out/target/product/ziti/*.zip .
-#mv out/target/product/ziti/ziti.json .
-#mv ziti.json ziti_vanilla.json
+#mv out/target/product/ziti/VANILLA/ziti.json .
+#mv ziti.json ax_vanilla.json
 #echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
