@@ -38,10 +38,13 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 
 #Generate Private keys
 gk -s
-#echo "-------------------generated ax--------------------"
-#rm -rf vendor/lineage-priv/keys
-#echo "-------------------Removed ax----------------------"
-#git clone https://github.com/anchalsehrawat/scripts.git -b ax vendor/lineage-priv/keys
+echo "-------------------generated ax--------------------"
+cd vendor/lineage-priv/
+rm -rf keys/
+wget https://github.com/anchalsehrawat/scripts/releases/download/axk/axk-20260409.zip 
+unzip ax-20260409.zip
+rm ax-20260409.zip
+croot
 #echo "-------------Cloned-------------------"
 
 #For OPcam
