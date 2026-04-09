@@ -24,6 +24,8 @@ echo "---------------RESYNCED-----------------"
 . build/envsetup.sh
 echo "---------------BUILD ENVIRONMENT------------------"
 
+rm -rf packages/apps/DolbyAtmos
+
 #Cherry-picks
 #hardware_lineage_compat
 cd hardware/lineage/compat
