@@ -5,8 +5,6 @@
 rm -rf hardware/lineage/compat
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
-#rm -rf frameworks/base
-#rm -rf vendor/lineage
 
 echo "----------------DELETED DIRECTORIES----------------"
 
@@ -36,10 +34,6 @@ cd packages/apps/Updater
 git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 13f622049a1818e0f5449180e4de51c47afcb2df
 croot
 
-#cd frameworks/base
-#git fetch https://github.com/anchalsehrawat/evox_frameworks_base.git -t bq2-fix && git cherry-pick 573fac673693a5d3bdb25ad0767f991f2ec1fbad faed489605a2962d81598db405d8e3608b23b18b
-#croot
-
 #Vanilla Updater urls
 #cd vendor/lineage
 #git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
@@ -57,15 +51,15 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 #rm -rf vendor/evolution-priv/keys/
 #git clone https://github.com/anchalsehrawat/scripts.git -b exk vendor/evolution-priv/keys
 
-#cd vendor/
-#mkdir evolution-priv/
-#cd evolution-priv/
-#rm -rf keys/
-#wget https://github.com/anchalsehrawat/scripts/releases/download/exk/exk.zip
-#unzip exk.zip
-#rm exk.zip
-#croot
-#echo "-------------Cloned k-------------------"
+cd vendor/
+mkdir evolution-priv/
+cd evolution-priv/
+rm -rf keys/
+wget https://github.com/anchalsehrawat/scripts/releases/download/exk/exk.zip
+unzip exk.zip
+rm exk.zip
+croot
+echo "-------------Cloned k-------------------"
 
 #Lunch
 lunch lineage_ziti-bp4a-userdebug
