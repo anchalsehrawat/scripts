@@ -70,26 +70,26 @@ lunch lineage_ziti-bp4a-userdebug
 export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 #Build GMS
-export WITH_GMS=true
-export TARGET_USES_MINI_GAPPS=true
+#export WITH_GMS=true
+#export TARGET_USES_MINI_GAPPS=true
 #export TARGET_INCLUDE_LIVE_WALLPAPERS=true
 
-m evolution
+#m evolution
 
-mv out/target/product/ziti/*.zip .
+#mv out/target/product/ziti/*.zip .
 #mv out/target/product/ziti/boot.img .
 #mv out/target/product/ziti/dtbo.img .
 #mv out/target/product/ziti/vbmeta.img .
 #mv out/target/product/ziti/vendor_boot.img .
 #mv out/target/product/ziti/super_empty.img .
-mv out/target/product/ziti/ziti.json .
-mv ziti.json ziti_gms.json
-echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
+#mv out/target/product/ziti/ziti.json .
+#mv ziti.json ziti_gms.json
+#echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
 
-#export WITH_GMS=false
-#m evolution
+export WITH_GMS=false
+m evolution
 
-#mv out/target/product/ziti/*.zip .
+mv out/target/product/ziti/*.zip .
 #mv out/target/product/ziti/ziti.json .
 #mv ziti.json ziti_vanilla.json
-#echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
+echo "--------------MOVED VANILLA BUILD TO ROOT DIRECTORY--------------"
