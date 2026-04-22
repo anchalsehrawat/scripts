@@ -27,8 +27,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #Cherry-picks
 #hardware_lineage_compat
 cd hardware/lineage/compat
-git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git -t sixteen && git cherry-pick 6f6bbb4a686ac367383584a183ebe31ee5d4b0e1 6a8ac15383a76806b807aaf70b3f6d98b907ec02
-croot
+git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git -t sixteen && git cherry-pick 6f6bbb4a686ac367383584a183ebe31ee5d4b0e1
 
 cd packages/apps/Updater
 git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-23.2 && git cherry-pick f69ef4232aa0ef3c701a577807f35831e2c286c7
@@ -55,11 +54,11 @@ axion ziti userdebug gms core
 ax -b -j$(nproc --all) userdebug
 
 mv out/target/product/ziti/*.zip .
-mv out/target/product/ziti/boot.img .
-mv out/target/product/ziti/dtbo.img .
-mv out/target/product/ziti/vendor_boot.img .
-mv out/target/product/ziti/super_empty.img .
-mv out/target/product/ziti/vbmeta.img .
+#mv out/target/product/ziti/boot.img .
+#mv out/target/product/ziti/dtbo.img .
+#mv out/target/product/ziti/vendor_boot.img .
+#mv out/target/product/ziti/super_empty.img .
+#mv out/target/product/ziti/vbmeta.img .
 mv out/target/product/ziti/GMS/ziti.json .
 mv ziti.json ax_gms.json
 echo "--------------MOVED GAPPS BUILD TO ROOT DIRECTORY--------------"
