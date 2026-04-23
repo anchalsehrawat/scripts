@@ -41,8 +41,8 @@ echo "-------------------generated ax--------------------"
 cd vendor/lineage-priv/
 rm -rf keys/
 wget https://github.com/anchalsehrawat/scripts/releases/download/axk/axk-20260409.zip 
-unzip ax-20260409.zip
-rm ax-20260409.zip
+unzip axk-20260409.zip
+rm axk-20260409.zip
 croot
 #echo "-------------Cloned-------------------"
 
