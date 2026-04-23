@@ -28,6 +28,7 @@ echo "---------------BUILD ENVIRONMENT------------------"
 #hardware_lineage_compat
 cd hardware/lineage/compat
 git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git -t sixteen && git cherry-pick 6f6bbb4a686ac367383584a183ebe31ee5d4b0e1
+croot
 
 cd packages/apps/Updater
 git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git lineage-23.2 && git cherry-pick f69ef4232aa0ef3c701a577807f35831e2c286c7
