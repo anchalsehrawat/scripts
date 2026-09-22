@@ -60,7 +60,7 @@ cd vendor/
 mkdir evolution-priv/
 cd evolution-priv/
 rm -rf keys/
-wget https://github.com/anchalsehrawat/scripts/releases/download/exk/exk17.zip
+wget https://github.com/anchalsehrawat/scripts/releases/download/exk17/exk17.zip
 unzip exk.zip
 rm exk.zip
 croot
