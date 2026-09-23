@@ -36,7 +36,7 @@ git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && gi
 croot
 
 cd hardware/qcom/wlan
-git fetch https://github.com/ziti-resources/evox_packages_apps_Updater.git && git cherry-pick 7f3966266d7afb91568234e2a3cd093609f7518c
+git fetch https://github.com/ziti-resources/android_hardware_qcom_wlan.git && git cherry-pick 7f3966266d7afb91568234e2a3cd093609f7518c
 croot
 
 #Vanilla Updater urls
