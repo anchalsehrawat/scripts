@@ -61,8 +61,8 @@ mkdir evolution-priv/
 cd evolution-priv/
 rm -rf keys/
 wget https://github.com/anchalsehrawat/scripts/releases/download/exk17/exk17.zip
-unzip exk.zip
-rm exk.zip
+unzip exk17.zip
+rm exk17.zip
 croot
 echo "-------------Cloned k-------------------"
 
