@@ -32,7 +32,7 @@ git fetch https://github.com/anchalsehrawat/android_hardware_lineage_compat.git 
 croot
 
 cd packages/apps/Updater
-git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 29144d48cfffbf5fb16e4d898ebb1d48ec9f9f3e
+git fetch https://github.com/anchalsehrawat/evox_packages_apps_Updater.git && git cherry-pick 05917688018f421382d124d15f0377dbfe3f14a8
 croot
 
 cd hardware/qcom/wlan
