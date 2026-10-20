@@ -43,6 +43,10 @@ cd build/soong
 git fetch https://github.com/PixelOS-AOSP/android_build_soong refs/changes/93/10693/2 && git cherry-pick FETCH_HEAD
 croot
 
+cd vendor/evolution
+git fetch https://github.com/PixelOS-AOSP/android_vendor_lineage refs/changes/58/10558/2 && git cherry-pick FETCH_HEAD
+croot
+
 #Vanilla Updater urls
 #cd vendor/lineage
 #git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
@@ -60,15 +64,15 @@ echo "----------------CHERRY-PICKS DONE-----------------"
 #rm -rf vendor/evolution-priv/keys/
 #git clone https://github.com/anchalsehrawat/scripts.git -b exk vendor/evolution-priv/keys
 
-cd vendor/
-mkdir evolution-priv/
-cd evolution-priv/
-rm -rf keys/
-wget https://github.com/anchalsehrawat/scripts/releases/download/exk17/exk17.zip
-unzip exk17.zip
-rm exk17.zip
-croot
-echo "-------------Cloned k-------------------"
+#cd vendor/
+#mkdir evolution-priv/
+#cd evolution-priv/
+#rm -rf keys/
+#wget https://github.com/anchalsehrawat/scripts/releases/download/exk17/exk17.zip
+#unzip exk17.zip
+#rm exk17.zip
+#croot
+#echo "-------------Cloned k-------------------"
 
 #Lunch
 lunch lineage_ziti-cp2a-userdebug
@@ -80,7 +84,7 @@ export UNSAFE_DISABLE_HIDDENAPI_FLAGS=true
 
 #Build GMS
 export WITH_GMS=true
-export TARGET_USES_MINI_GAPPS=true
+#export TARGET_USES_MINI_GAPPS=true
 #export TARGET_INCLUDE_LIVE_WALLPAPERS=true
 
 m evolution
