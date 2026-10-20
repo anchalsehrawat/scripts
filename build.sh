@@ -39,6 +39,10 @@ cd hardware/qcom/wlan
 git fetch https://github.com/ziti-resources/android_hardware_qcom_wlan.git && git cherry-pick 7f3966266d7afb91568234e2a3cd093609f7518c
 croot
 
+cd build/soong
+git fetch https://github.com/PixelOS-AOSP/android_build_soong refs/changes/93/10693/2 && git cherry-pick FETCH_HEAD
+croot
+
 #Vanilla Updater urls
 #cd vendor/lineage
 #git fetch https://github.com/anchalsehrawat/vendor_evolution.git && git cherry-pick 587744521b5af1293dff08f602087f41b9be2add
