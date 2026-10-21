@@ -6,6 +6,7 @@ rm -rf hardware/lineage/compat
 rm -rf packages/apps/Updater
 rm -rf .repo/local_manifests
 rm -rf hardware/qcom/wlan
+rm -rf build/soong
 
 echo "----------------DELETED DIRECTORIES----------------"
 
@@ -43,7 +44,7 @@ cd build/soong
 git fetch https://github.com/PixelOS-AOSP/android_build_soong refs/changes/93/10693/2 && git cherry-pick FETCH_HEAD
 croot
 
-cd vendor/evolution
+cd vendor/lineage
 git fetch https://github.com/PixelOS-AOSP/android_vendor_lineage refs/changes/58/10558/2 && git cherry-pick FETCH_HEAD
 croot
 
